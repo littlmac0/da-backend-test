@@ -1,0 +1,13 @@
+{
+    "name": "will/backend-test",
+    "description": "Backend test for Digital Artisans",
+    "authors": [
+        {
+            "name": "Will McMillian",
+            "email": "littlmac0@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}

@@ -1,0 +1,24 @@
+{% for company in companyEmployeeMap %}
+    <div class="company-info">
+        <h1>{{ company.info.company_name }}</h1>
+        <div class="employees">
+            {% for employee in company.employees %}
+                {% if employee.isActive == 'true' %}
+                    <div class="employee-info">
+                        <ul>
+                            {% if employee.employee_name.0 is not empty %}
+                                <li>{{ employee.employee_name.0.first_name }} {{ employee.employee_name.0.last_name }}</li>
+                            {% endif %}
+                            <li>{{ employee.email }}</li>
+                            <li>{{ employee.phone }}</li>
+                            <li>{{ employee.address }}</li>
+                            {% if employee.department.0 is not empty %}
+                                <li>{{ employee.department.0.name }}</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}
