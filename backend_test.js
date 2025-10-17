@@ -1,8 +1,7 @@
 //fiddle: https://jsfiddle.net/4gqh0z2b/2/
 
-const tbody = document.querySelector('#company-data-table tbody');
-
 const fillTable = () => {
+    const tbody = document.querySelector('#company-data-table tbody');
     tbody.innerHTML = '';
     let createCell = (classes, content) => {
         let cell = document.createElement('td');
